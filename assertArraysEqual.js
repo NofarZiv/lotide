@@ -1,8 +1,8 @@
-const assertArraysEqual = function(ar, ar1, str) {
-  if (eqArrays(ar, ar1) === str) {
-    return `✅✅✅ Assertion Passed: ${eqArrays(ar, ar1)} === ${str}`;
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    return `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
   }
-  return `🛑🛑🛑 Assertion Failed: ${eqArrays(ar, ar1)} !== ${str}`;
+  return `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
 
 };
 
@@ -21,7 +21,9 @@ const eqArrays = function(arr1, arr2) {
 
 
 
-console.log(assertArraysEqual([1, 2, 3], [1, 2, 3], true));
-console.log(assertArraysEqual([1, 2, 3], [3, 2, 1], false));
-console.log(assertArraysEqual(["1", "2", "3"], ["1", "2", "3"], true));
-console.log(assertArraysEqual(["1", "2", "3"], ["1", "2", 3], false));
+console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]));
+console.log(assertArraysEqual([1, 2, 3], [3, 2, 1]));
+console.log(assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]));
+console.log(assertArraysEqual(["1", "2", "3"], ["1", "2", 3]));
+
+
