@@ -7,7 +7,5 @@ const tail = function(arr) {
 };
 
 
+module.exports = tail;
 
-console.log(tail(["Hello", "Lighthouse", "Labs"]));
-console.log(tail([1]));
-console.log(tail([]));
